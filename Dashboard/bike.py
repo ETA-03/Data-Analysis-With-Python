@@ -2,15 +2,9 @@ import streamlit as st
 import pandas as pd
 import matplotlib as plt
 import seaborn as sns
-import zipfile
 
-# Path ke file ZIP 
-zip_path = 'C:/Users/HP/Bike-sharing-dataset.zip'
-# Ekstraksi ZIP
-with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-    zip_ref.extractall('/content/dataset')
-df_hour = pd.read_csv('/content/dataset/hour.csv')
-df_day = pd.read_csv('/content/dataset/day.csv')
+df_hour = pd.read_csv('https://raw.githubusercontent.com/ETA-03/Data-Analysis-with-Python/refs/heads/main/data/hour.csv')
+df_day = pd.read_csv('https://raw.githubusercontent.com/ETA-03/Data-Analysis-with-Python/refs/heads/main/data/day.csv')
 df_hr_selected = df_hour[['hr','cnt']]
 df_day_selected = df_day[['dteday','temp','cnt']]
 
