@@ -7,4 +7,3 @@ Analisa data rental sepeda yang tesaji dalam dua file (.csv)
 <br>import streamlit as st
 
 - **in your terminal**
-<br>streamlit run AnalisaData.py
